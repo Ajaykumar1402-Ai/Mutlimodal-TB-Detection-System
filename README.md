@@ -1,50 +1,16 @@
-# AI-Based Multimodal Tuberculosis Detection System
+# React + Vite
 
-A complete end-to-end system for TB screening, using a combination of deep learning for Chest X-Ray images and machine learning for clinical tabular data. This application features a modern 3D React user interface with glassmorphism aesthetics, driven by a robust local FastAPI backend.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
-- **Multimodal AI Analysis**: Combines a Convolutional Neural Network (TensorFlow MobileNet simulation) for X-Rays and a clinical rule-based/ML engine for symptom data.
-- **3D Interactive Interface**: Built with React Three Fiber, providing a premium healthcare dashboard experience.
-- **Explainable AI (Mock)**: Visual representation highlighting affected X-Ray areas using Grad-CAM approximations.
-- **Automated PDF Reports**: Generates detailed medical PDF reports upon diagnosis.
-- **Email Notifications**: Automatically emails reports to doctors using dynamic SMTP configs.
-- **Secure Authentication**: JWT-based login/signup for secure medical record access.
+Currently, two official plugins are available:
 
-## How to Run Locally
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-### 1. Backend (FastAPI)
-The backend uses Python 3.10+ and requires a virtual environment.
-1. Open a terminal and navigate to the `backend/` directory:
-   ```cmd
-   cd backend
-   .\venv\Scripts\activate
-   ```
-2. Run the FastAPI server:
-   ```cmd
-   python run.py
-   ```
-   *The API will start at `http://localhost:8000`*
+## React Compiler
 
-### 2. Frontend (React + Vite)
-The frontend requires Node.js (LTS).
-1. Open a new terminal and navigate to the `frontend/` directory:
-   ```cmd
-   cd frontend
-   ```
-2. Start the Vite React development server:
-   ```cmd
-   npm run dev
-   ```
-   *The UI will start at `http://localhost:5173` (or the port specified by Vite).*
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### 3. Usage Guide
-- Open `http://localhost:5173`.
-- Click "Sign Up" to create a test doctor account.
-- Log in and navigate to the Dashboard.
-- Go to "New Diagnosis" in the sidebar.
-- Upload any Chest X-Ray test image, toggle the clinical parameters, and click "Run Diagnostics".
-- A comprehensive TB risk profile will be generated, the report saved to `backend/reports/`, and a simulated email sent.
+## Expanding the ESLint configuration
 
-## Technologies Used
-- **Frontend**: React, Vite, TailwindCSS, React Three Fiber, Framer Motion, Recharts
-- **Backend**: Python, FastAPI, SQLAlchemy (SQLite), Passlib/pyJWT, TensorFlow (Keras), FPDF
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
